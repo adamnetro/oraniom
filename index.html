@@ -6,23 +6,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta itemprop="description" name="description"
     content="An advanced and secure social networking site with new features" />
+  <script src="https://kit.fontawesome.com/6c24739fa1.js" crossorigin="anonymous"></script>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <title>ORANIOM</title>
 </head>
 
 <main>
   <a onclick="chgEn(event)" id="lang" data-lang="انجليزي" class="mainaOn">English</a>
-  <a onclick="chgAr(event)" id="lang" data-lang="عربي">Arabic</a>
+  <a onclick="chgAr(event)" id="lang" class="ar" data-lang="عربي">Arabic</a>
 </main>
 
 <body>
-  <div>
-    <h1 id="lang" data-lang="اورانيوم">
-      ORANIOM <span>.com</span>
-    </h1>
-    <a id="lang" data-lang="بواسطة MrNetro" href="https://www.instagram.com/mrnetro7/">by MrNetro</a>
+  <div class="ctrItm">
+    <div>
+      <h1 id="lang" data-lang="اورانيوم">
+        ORANIOM <span>.com</span>
+      </h1>
+    </div>
+    <p id="lang" data-lang="الإصدار المستقبلي">FUTURE RELEASE</p>
+
+    <bt class="animate-bounce" onclick="scrollDown()"><i class="fa-solid fa-angles-down"></i></bt>
   </div>
-  <p id="lang" data-lang="الإصدار المستقبلي">FUTURE RELEASE</p>
+
+  <section class="lf">
+    <p data-lang="موقع تواصل اجتماعي متطور وآمن بميزات جديدة" id="lang" class="toRight">An advanced and secure social networking site with new features</p>
+  </section>
+
+  <section class="rt">
+    <img class="toLeft" src="images/network-3240536_960_720.webp">
+  </section>
+
+  <section class="lf">
+    <p data-lang="آمن بنسبة 80% ويتميز بدعم على مدار 24 ساعة" id="lang" class="toRight">80% secure and features 24h support</p>
+  </section>
 
   <script src="script.js"></script>
 </body>

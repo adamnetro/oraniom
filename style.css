@@ -1,33 +1,53 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
 * {
-  font-family: "Rubik", sans-serif;
   padding: 0;
   margin: 0;
   scroll-behavior: smooth;
   box-sizing: border-box;
 }
 
+:root {
+  --clr-df: #b700ff;
+  --clr-df-hover: #9c00da;
+  --clr-1: rgb(15, 15, 15);
+  --clr-2: rgb(21, 21, 21);
+  --clr-3: rgb(32, 32, 32);
+  --clr-4: rgb(43, 43, 43);
+  --clr-black: black;
+  --clr-gray: gray;
+  --clr-reverse: white;
+  --clr-white: white;
+  --clr-red: rgb(221, 25, 58);
+  --clr-orange: rgb(247, 181, 0);
+  --clr-txt: white;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+  background: var(--clr-1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--clr-df);
+}
+
 body {
-  background: linear-gradient(to left, rgb(15, 15, 15) -10%, #58007a 900%);
+  background: linear-gradient(to left, var(--clr-1) -10%, #58007a 900%);
   display: flex;
   flex-direction: column;
-  height: 90vh;
-  width: 100%;
-  justify-content: center;
+  height: max-content;
   align-items: center;
-  gap: 3em;
+  padding-bottom: 20em;
 }
 
 main {
-  position: fixed;
+  position: absolute;
   top: 1em;
   display: flex;
-  border: 1px solid white;
+  border: 1px solid var(--clr-txt);
 }
 
 main a {
-  color: white;
+  color: var(--clr-txt);
   font-size: 1em;
   cursor: pointer;
   padding: 2px 10px;
@@ -39,43 +59,116 @@ main a:hover {
 }
 
 .mainaOn {
-  background: white;
+  background: var(--clr-txt);
   color: rgb(21, 21, 21);
 }
 
-div {
+.ctrItm {
+  margin-top: 15em;
+  top: 3em;
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 8em;
+}
+
+.ctrItm div {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2em;
 }
 
+bt {
+  opacity: 0.5;
+  color: var(--clr-txt);
+  font-size: 4em;
+  cursor: pointer;
+}
+bt:hover {
+  opacity: 1;
+  transition: 0.1s ease;
+}
+
 h1 {
+  font-weight: bold;
   font-size: 5em;
-  color: #b700ff;
+  color: var(--clr-df);
 }
 
 h1 span,
-div a,
 p {
-  color: white;
+  color: var(--clr-txt);
 }
 
-div a {
-  font-weight: 200;
-  text-decoration: underline;
-}
-
-p {
+.ctrItm p {
   font-size: 2em;
 }
 
+section {
+  height: max-content;
+  width: 100%;
+  margin: 5em;
+}
+
+section img {
+  transform: scale(0.7);
+}
+
+.lf {
+  display: flex;
+  justify-content: start;
+}
+.rt {
+  display: flex;
+  justify-content: end;
+}
+
+.toRight,
+.toLeft {
+  opacity: 0;
+  color: var(--clr-txt);
+  font-size: 3em;
+  width: 50%;
+  transition: 0.7s ease;
+}
+
+.toRightOn {
+  opacity: 1;
+  margin-left: 2em;
+}
+
+.toLeftOn {
+  opacity: 1;
+  margin-right: 2em;
+}
+
 @media (max-width: 1080px) {
+  .ctrItm {
+    margin-top: 12em;
+  }
   h1 {
     font-size: 2.5em;
   }
 
   p {
     font-size: 1.5em;
+  }
+
+  .toRight,
+  .toLeft {
+    font-size: 1.7em;
+    width: 80%;
+  }
+
+  .toRightOn {
+    margin-left: 0.5em;
+  }
+
+  .toLeftOn {
+    margin-right: 0.5em;
   }
 }
