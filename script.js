@@ -21,12 +21,12 @@ function chgAr(e) {
     lang.textContent = lang.getAttribute("data-lang");
   });
   document.querySelector("div h1").innerHTML += ` <span>.com</span>`;
-  toRts.forEach((toRt) => {
-    toRt.classList.replace("toRight", "toLeft");
-  });
-  toLfs.forEach((toLf) => {
-    toLf.classList.replace("toLeft", "toRight");
-  });
+  // toRts.forEach((toRt) => {
+  //   toRt.classList.replace("toRight", "toLeft");
+  // });
+  // toLfs.forEach((toLf) => {
+  //   toLf.classList.replace("toLeft", "toRight");
+  // });
 
   localStorage.setItem("ar", "On");
 }
