@@ -131,7 +131,7 @@ section img {
 .toLeft {
   opacity: 0;
   color: var(--clr-txt);
-  font-size: 3em;
+  font-size: 2.5em;
   width: 50%;
   transition: 0.7s ease;
 }
